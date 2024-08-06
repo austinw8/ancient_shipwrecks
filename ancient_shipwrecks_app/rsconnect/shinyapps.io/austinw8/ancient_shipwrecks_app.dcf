@@ -5,7 +5,7 @@ account: austinw8
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 12417089
-bundleId: 8954095
+bundleId: 8954259
 url: https://austinw8.shinyapps.io/ancient_shipwrecks_app/
 version: 1
 asMultiple: FALSE

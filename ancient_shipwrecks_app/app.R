@@ -21,9 +21,7 @@ library(bslib)
 library(here)
 
 # Data Import and Tidy ----------------------------------------------------
-
-shipwrecks <- read_csv(here("ancient_shipwrecks_app", "geodatabase_shipwrecks.csv"))
-
+shipwrecks <- read_csv("geodatabase_shipwrecks.csv")
 colnames(shipwrecks) <- tolower(colnames(shipwrecks))
 
 format_time_period <- function(start, end) {
@@ -232,7 +230,7 @@ server <- function(input, output, session) {
     }
     
     leaflet(data = wreck_data) |> 
-      addProviderTiles(provider = "CartoDB.Positron") |> 
+      addProviderTiles(provider = "Esri.WorldTopoMap") |> 
       setView(lng = 16, lat = 47, zoom = 4) |> 
       addCircleMarkers(
         lng = ~longitude, 
